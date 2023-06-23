@@ -1,0 +1,19 @@
+{
+  "name": "rodrigodev/book-list",
+  "autoload": {
+    "psr-4": {
+      "BookList\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Rodrigo de Lima Alves",
+      "email": "rodrigolima.alves21@gmail.com"
+    }
+  ],
+  "require-dev": {
+    "symfony/var-dumper": "^6.3"
+  },
+  "require": {
+  }
+}

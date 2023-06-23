@@ -1,0 +1,40 @@
+
+arquivo routes antes:
+<?php
+
+use BookList\Controller\BookController;
+use BookList\Controller\DashboardController;
+use BookList\Controller\UserController;
+use BookList\Domain\Infraestructure\Persistence\PdoConnectionCreator;
+use BookList\Domain\Infraestructure\Repository\PdoBookRepository;
+use BookList\Domain\Infraestructure\Repository\PdoUserRepository;
+
+//require_once __DIR__ . "/../vendor/autoload.php";
+//
+//$uri = parse_url($_SERVER['REQUEST_URI'])['path'];
+//
+//if ($uri === "/index.php" || $uri === "/" ) $uri = "/dashboard";
+//
+//$pdo = PdoConnectionCreator::creatorConnection();
+//
+//$bookRepository = new PdoBookRepository($pdo);
+//$userRepository = new PdoUserRepository($pdo);
+//
+//$dashboardController = new DashboardController($bookRepository);
+//$userController = new UserController($userRepository);
+//$bookController = new BookController($bookRepository);
+//
+//function routes(): array
+//{
+//    $routes = [
+//        '/' => $dashboardController->index(),
+//        '/users' => $userController->index()
+////    '/books' => $bookController->index(),
+////    '/bookCreate' => 'views/books/create.view.php',
+////    '/login' => 'views/auth/login.view.php',
+////    '/register' => 'views/auth/register.view.php'
+//    ];
+//
+//    return $routes;
+//}
+?>

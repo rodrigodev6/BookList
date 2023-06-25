@@ -1,13 +1,13 @@
 <?php
 
 namespace BookList\Domain\Model;
-
+use DateTimeInterface;
 class User
 {
     private ?int $id;
     private string $name;
     private string $email;
-    private \DateTimeInterface $birthDate;
+    private DateTimeInterface $birthDate;
     private string $username;
     private string $password;
 
@@ -15,7 +15,7 @@ class User
         ?int $id,
         string $name,
         string $email,
-        \DateTimeInterface $birthDate,
+        DateTimeInterface $birthDate,
         string $username,
         string $password)
     {
@@ -51,7 +51,7 @@ class User
         return $this->email;
     }
 
-    public function birthDate(): \DateTimeInterface
+    public function birthDate(): DateTimeInterface
     {
         return $this->birthDate;
     }

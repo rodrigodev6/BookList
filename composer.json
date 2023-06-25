@@ -15,5 +15,6 @@
     "symfony/var-dumper": "^6.3"
   },
   "require": {
+    "ext-pdo": "*"
   }
 }

@@ -9,7 +9,7 @@
         <nav>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                    <a href="index.php">Livros</a>
+                    <a href="/books">Livros</a>
                 </li>
                 <li class="breadcrumb-item active">
                     Criar
@@ -31,7 +31,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">Adicionar Livro</h5>
 
-                                <form class="row g-3" method="POST" action="">
+                                <form class="row g-3" method="POST" action="/bookCreate">
                                     <div class="col-md-6">
                                         <label for="inputNameId" class="form-label">Nome</label>
                                         <input name="name" type="text" class="form-control" id="inputNameId">

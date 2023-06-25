@@ -1,19 +1,22 @@
 <?php
 
-function routeToController($uri, $routes): void
+function routeToController(array $routes): void
 {
+    $currentRoute = parse_url($_SERVER['REQUEST_URI'])['path'];
+    $requestMethod = $_SERVER['REQUEST_METHOD'];
 
-if(array_key_exists($uri, $routes)) {
-        require_once __DIR__ . $routes[$uri];
+    if (isset($routes[$currentRoute][$requestMethod])) {
+        $route = $routes[$currentRoute][$requestMethod];
+        $controller = new $route['controller']();
+        $method = $route['method'];
+        $controller->$method();
     } else {
-        httpError(404);
+        abort();
     }
-
 }
 
-function httpError($code): void
+function abort($code = 404): void
 {
     http_response_code($code);
     require_once __DIR__ . '/../views/404.view.php';
 }
-

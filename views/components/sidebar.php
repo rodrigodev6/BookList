@@ -6,7 +6,8 @@
 
         <!-- Dashboard Nav -->
         <li class="nav-item">
-            <a class="nav-link" href="index.php">
+            <?php /** @var string $page */ ?>
+            <a class="nav-link <?= $this->page === 'dashboard' ? '' : 'collapsed' ?>" href="/dashboard">
                 <i class="bi bi-grid"></i>
                 <span>Dashboard</span>
             </a>
@@ -15,7 +16,7 @@
 
         <!-- Books Nav -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="/books">
+            <a class="nav-link <?= $this->page=== 'books' ? '' : 'collapsed' ?>" href="/books">
                 <i class="bi bi-grid"></i>
                 <span>Livros</span>
             </a>
@@ -24,7 +25,7 @@
 
         <!-- Users Nav -->
         <li class="nav-item">
-            <a class="nav-link collapsed" href="/users">
+            <a class="nav-link <?= $this->page === 'users' ? '' : 'collapsed' ?>" href="/users">
                 <i class="bi bi-grid"></i>
                 <span>Usuários</span>
             </a>

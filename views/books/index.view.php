@@ -9,7 +9,7 @@
         <nav>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item">
-                    <a href="index.php">Livros</a>
+                    <a href="/books">Livros</a>
                 </li>
                 <li class="breadcrumb-item active">
                     Lista

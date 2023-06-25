@@ -40,7 +40,7 @@
                                                 <i class="bi bi-book"></i>
                                             </div>
                                             <div class="ps-3">
-                                                <h6>15</h6>
+                                                <h6><?= $totalBooks ?></h6>
                                             </div>
                                         </div>
                                     </div>

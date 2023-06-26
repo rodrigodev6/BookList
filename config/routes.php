@@ -2,12 +2,12 @@
 
 require_once __DIR__ . '/functions.php';
 
-use BookList\Controller\{
-    DashboardController,
+use BookList\Controller\{DashboardController,
     BookListController,
     BookEditController,
     BookDeleteController,
     BookCreateController,
+    UserDeleteController,
     UserListController,
     UserCreateController,
     UserEditController};
@@ -63,6 +63,12 @@ $routes = [
             'method' => 'index'
         ]
     ],
+    '/userRemove' => [
+        'GET' => [
+            'controller' => UserDeleteController::class,
+            'method' => 'delete'
+        ]
+    ],
     '/userCreate' => [
         'GET' => [
             'controller' => UserCreateController::class,
@@ -72,17 +78,7 @@ $routes = [
             'controller' => UserCreateController::class,
             'method' => 'store'
         ]
-    ],
-    '/userEdit' => [
-        'GET' => [
-            'controller' => UserEditController::class,
-            'method' => 'edit'
-        ],
-        'POST' => [
-            'controller' => UserEditController::class,
-            'method' => 'update'
-        ]
-    ],
+    ]
 ];
 
 

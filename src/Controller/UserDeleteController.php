@@ -2,20 +2,20 @@
 
 namespace BookList\Controller;
 
-class BookDeleteController extends BookController
+class UserDeleteController extends UserController
 {
-    public function delete()
+    public function delete(): void
     {
 
         try {
             $this->pdo->beginTransaction();
-            $this->bookRepository->delete($this->id());
+            $this->userRepository->delete($this->id());
             $this->pdo->commit();
 
-            header('Location: /books?success=1');
+            header('Location: /users?success=1');
         } catch (\RuntimeException $e) {
             $this->pdo->rollBack();
-            header('Location: /books?success=0');
+            header('Location: /users?success=0');
         }
     }
 

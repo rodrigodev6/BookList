@@ -8,11 +8,11 @@ use BookList\Domain\Infraestructure\Repository\PdoUserRepository;
 class UserController
 {
     protected PdoUserRepository $userRepository;
+    protected \PDO $pdo;
     public string $page = "users";
-
     public function __construct()
     {
-        $pdo = PdoConnectionCreator::creatorConnection();
-        $this->userRepository = new PdoUserRepository($pdo);
+        $this->pdo = PdoConnectionCreator::creatorConnection();
+        $this->userRepository = new PdoUserRepository($this->pdo);
     }
 }

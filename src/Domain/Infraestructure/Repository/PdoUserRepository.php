@@ -68,11 +68,11 @@ class PdoUserRepository implements UserRepository
         return $result;
     }
 
-    public function delete(User $user): bool
+    public function delete(int $userId): bool
     {
         $sqlDelete = "DELETE FROM users WHERE id = :id;";
         $statement = $this->connection->prepare($sqlDelete);
-        $statement->bindValue(':id', $user->id(), PDO::PARAM_INT);
+        $statement->bindValue(':id', $userId, PDO::PARAM_INT);
         $result = $statement->execute();
 
         if ($statement->rowCount() === 0) {

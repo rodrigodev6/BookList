@@ -42,7 +42,7 @@
                                                name="name"
                                                type="text"
                                                class="form-control"
-                                               id="inputNameId" 
+                                               id="inputNameId"
                                                value="<?= $book['name'] ?>">
                                     </div>
                                     <div class="col-md-6">

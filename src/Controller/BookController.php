@@ -10,10 +10,11 @@ class BookController
     public string $page = "books";
 
     protected PdoBookRepository $bookRepository;
+    protected \PDO $pdo;
 
     public function __construct()
     {
-        $pdo = PdoConnectionCreator::creatorConnection();
-        $this->bookRepository = new PdoBookRepository($pdo);
+        $this->pdo = PdoConnectionCreator::creatorConnection();
+        $this->bookRepository = new PdoBookRepository($this->pdo);
     }
 }

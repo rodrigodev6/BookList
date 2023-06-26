@@ -31,23 +31,46 @@
                             <div class="card-body">
                                 <h5 class="card-title">Editar Livro</h5>
 
+                                <?php /** @var array $book */ ?>
                                 <form class="row g-3" method="POST" action="/bookEdit">
-
+                                    <input type="hidden" name="_method" value="PUT" >
+                                    <input type="hidden" name="id" value="<?= $book['id'] ?>">
+                                    <input type="hidden" name="userId" value="<?= $book['user_id'] ?>">
                                     <div class="col-md-6">
                                         <label for="inputNameId" class="form-label">Nome</label>
-                                        <input name="name" type="text" class="form-control" id="inputNameId">
+                                        <input required
+                                               name="name"
+                                               type="text"
+                                               class="form-control"
+                                               id="inputNameId" 
+                                               value="<?= $book['name'] ?>">
                                     </div>
                                     <div class="col-md-6">
                                         <label for="inputAuthorId" class="form-label">Autor</label>
-                                        <input name="author" type="text" class="form-control" id="inputAuthorId">
+                                        <input required
+                                               name="author"
+                                               type="text"
+                                               class="form-control"
+                                               id="inputAuthorId"
+                                               value="<?= $book['author'] ?>">
                                     </div>
                                     <div class="col-md-6">
                                         <label for="inputThemeId" class="form-label">Tema</label>
-                                        <input name="theme" type="text" class="form-control" id="inputThemeId">
+                                        <input required
+                                               name="theme"
+                                               type="text"
+                                               class="form-control"
+                                               id="inputThemeId"
+                                               value="<?= $book['theme'] ?>">
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="inputPriceId" class="form-label">Preço</label>
-                                        <input name="price" type="number" class="form-control" id="inputPriceId">
+                                        <label for="inputPriceId" class="form-label">Preço (#.###,##)</label>
+                                        <input required
+                                               name="price"
+                                               type="text"
+                                               class="form-control"
+                                               id="inputPriceId"
+                                               value="<?= $this->price($book['price']) ?>">
                                     </div>
 
                                     <div class="col-md-12 mb-0">

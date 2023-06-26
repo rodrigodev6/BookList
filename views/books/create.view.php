@@ -34,19 +34,35 @@
                                 <form class="row g-3" method="POST" action="/bookCreate">
                                     <div class="col-md-6">
                                         <label for="inputNameId" class="form-label">Nome</label>
-                                        <input name="name" type="text" class="form-control" id="inputNameId">
+                                        <input name="name"
+                                               required
+                                               type="text"
+                                               class="form-control"
+                                               id="inputNameId">
                                     </div>
                                     <div class="col-md-6">
                                         <label for="inputAuthorId" class="form-label">Autor</label>
-                                        <input name="author" type="text" class="form-control" id="inputAuthorId">
+                                        <input name="author"
+                                               required
+                                               type="text"
+                                               class="form-control"
+                                               id="inputAuthorId">
                                     </div>
                                     <div class="col-md-6">
                                         <label for="inputThemeId" class="form-label">Tema</label>
-                                        <input name="theme" type="text" class="form-control" id="inputThemeId">
+                                        <input name="theme"
+                                               required
+                                               type="text"
+                                               class="form-control"
+                                               id="inputThemeId">
                                     </div>
                                     <div class="col-md-6">
                                         <label for="inputPriceId" class="form-label">Preço</label>
-                                        <input name="price" type="number" class="form-control" id="inputPriceId">
+                                        <input name="price"
+                                               required
+                                               type="text"
+                                               class="form-control"
+                                               id="inputPriceId">
                                     </div>
 
                                     <div class="col-md-12 mb-0">

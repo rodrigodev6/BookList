@@ -6,11 +6,11 @@ use BookList\Controller\{
     DashboardController,
     BookListController,
     BookEditController,
+    BookDeleteController,
     BookCreateController,
     UserListController,
     UserCreateController,
-    UserEditController,
-};
+    UserEditController};
 
 $routes = [
     '/' => [
@@ -49,6 +49,12 @@ $routes = [
         'POST' => [
             'controller' => BookEditController::class,
             'method' => 'update'
+        ]
+    ],
+    '/bookRemove' => [
+        'GET' => [
+            'controller' => BookDeleteController::class,
+            'method' => 'delete'
         ]
     ],
     '/users' => [

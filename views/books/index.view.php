@@ -45,7 +45,7 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <?php /** @var TYPE_NAME $books */
+                                    <?php /** @var array $books */
                                     foreach ($books as $book): ?>
                                         <tr>
                                             <th scope="row">
@@ -54,11 +54,11 @@
                                                 </a>
                                             </th>
                                             <td><?= $book->name() ?></td>
-                                            <td><?= $book->price() ?></td>
+                                            <td><?= "R$ " . number_format($book->price(),2,',','.') ?></td>
                                             <td><?= $book->author() ?></td>
                                             <td><?= $book->theme() ?></td>
                                             <td>
-                                                <a href="/userRemove?id=<?= $book->id() ?>">
+                                                <a href="/bookRemove?id=<?= $book->id() ?>">
                                                     <i class="bi bi-trash" style="color:red"></i>
                                                 </a>
                                             </td>
